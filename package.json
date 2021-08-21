@@ -4,7 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "Act_2": "cd Act_2 && npm run start",
+    "Act_2-install": "cd Act_2 && npm install",
+    "server-install": "npm install",
+    "install-all": "concurrently \"npm run Act_2-install\"\"npm run server-install\"",
+    "server": "nodemon index --ignore Act_2/",
+    "dev": "concurrently \"npm run Act_2\"\"npm run server\",
   },
   "keywords": [],
   "author": "",
